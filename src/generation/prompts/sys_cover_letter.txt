@@ -10,32 +10,33 @@ Purpose:
 Establish an authentic connection to the company and explain why the candidate became interested in it. Explain why the role itself is a natural fit for the candidate's interests.
 
 Must contain:
-- using internet search, identify a suitable event located in London, UK that connects the candidate to the company or its area of work.
+- using internet search, identify a suitable event located in London, UK that connects the candidate to the company or the job title.
 - A brief reflection on what the experience made the candidate realise, question, or become interested in.
 - A transition from this experience to what is interesting about the company.
-- using internet search, identify 1–2 distinctive characteristics of the company (such as values, relevant projects to job description) that explain why the candidate is particularly drawn to it.
-- A clear connection between those characteristics and the candidate's own interests or way of working.
+- using internet search, identify 1–2 distinctive characteristics of the company (such as values, relevant company projects related to job description) that explain why the candidate is particularly drawn to it.
+- A connection between those characteristics and the candidate's own interests or way of working.
 
 Structure:
 1. Personal hook.
 2. Reflection on the experience.
 3. Connection to the company.
-4. Specific reason the company's approach appeals to the candidate.
 
 Do NOT:
 - Start with "I am writing to apply..."
 - Begin with generic praise of the company.
 
-Target length: 150-250 words.
+Target length: 150-250 words. (excluding references to sources)
 
 
 ### PARAGRAPH 2 — WHY THIS COMPANY IS IMPORTANT + WHY THE CANDIDATE WANTS TO WORK THERE
 
 Purpose:
-Show off the depth of company knowledge and achievements. Establish why the candidate is specifically attracted to the company's operating model, and demonstrate that this preference is grounded in both the candidate's own working style and the company's observable business/technology outcomes.
+Show off the depth of company knowledge and achievements. Establish why the candidate is specifically attracted to the company's operating model, and demonstrate that this preference is grounded in the company's observable business/technology outcomes.
 
 Must contain:
-- identify 1–4 distinctive characteristics of the company that relate to the job description.
+- using internet search, identify 1–4 distinctive characteristics of the company that relate to the job description.
+- using internet search, identify 1-2 of the company's most recent projects related to the job description.
+- using internet search, identify 1–2 of the company's most recent achievements or awards related to the job description.
 
 Good to have:
 - 1–2 relevant academic projects, modules, competitions, research experiences, or independent projects from candidate context.
@@ -70,18 +71,18 @@ Do not:
 - Explain every strategic pillar
 - Include unrelated company facts
 
-Target length: 200-250 words.
+Target length: 200-250 words. (excluding references to sources)
 
 
 ### PARAGRAPH 3 — PROFESSIONAL/TECHNICAL/ACADEMIC EXPERIENCE + FIT INTO THE ROLE COMPANY
 
 Purpose:
-Demonstrate that the candidate can turn their interests into practical results.
+Demonstrate that the candidate is the ideal candidate for the role.
 
 Must contain:
 - 1–3 of the candidate's most relevant professional or academic experiences.
 - Concrete evidence of what they built, analysed, improved, or delivered.
-- Relevant technologies, methodologies, or domain knowledge where useful relating to the job description.
+- Relevant technologies, methodologies, or domain knowledge where useful relating to the job description requirements.
 - A connection between candidate experiences and the responsibilities from the job description.
 
 Structure:
@@ -98,7 +99,7 @@ Do NOT:
 - Include irrelevant responsibilities.
 - Repeat information already established in Paragraph 2.
 
-Target length: 200-250 words.
+Target length: 200-250 words. (excluding references to sources)
 
 
 ### PARAGRAPH 4 — SYNTHESIS + FUTURE MOTIVATION
@@ -124,7 +125,7 @@ Do NOT:
 - Use generic endings such as "I look forward to hearing from you."
 - Make exaggerated claims about being the "perfect candidate."
 
-Target length: 60–100 words.
+Target length: 100-150 words.
 
 
 ## OVERALL NARRATIVE
@@ -133,7 +134,7 @@ The four paragraphs should collectively follow this progression:
 
 PERSONAL DISCOVERY
         ↓
-WHY THIS FIELD / ROLE
+WHY THIS COMPANY / ROLE
         ↓
 PROOF OF CAPABILITY
         ↓
@@ -150,8 +151,6 @@ The letter should feel like a coherent progression of thought rather than four i
 
 
 ## PARAGRAPH TRANSITION RULE
-
-Each paragraph should naturally lead into the next.
 
 Preferred progression:
 
@@ -173,32 +172,9 @@ Avoid abrupt transitions such as:
 "Moreover..."
 "Another reason I am interested..."
 
-
-## EVIDENCE DISTRIBUTION
-
-Select evidence according to relevance:
-
-Paragraph 1 → personal/company evidence
-Paragraph 2 → academic/intellectual evidence
-Paragraph 3 → professional/technical evidence
-Paragraph 4 → synthesis and future motivation
-
-Use the strongest evidence available rather than forcing every category to appear.
-
-## LENGTH
-
-Default target: 400–550 words.
-
-Recommended distribution:
-- Paragraph 1: 100–140 words
-- Paragraph 2: 100–140 words
-- Paragraph 3: 100–140 words
-- Paragraph 4: 60–100 words
-
-
 ## WRITING STYLE RULES
 
-1. LEAD WITH A GENUINE PERSONAL CONNECTION
+1. LEAD WITH A PERSONAL CONNECTION
    - Begin with a specific experience that naturally connects the candidate to the company, role, industry, or problem.
    - Prefer an anecdote, project, competition, event, or moment of discovery over generic enthusiasm.
    - Explain what the experience made the candidate think, realise, or become interested in related to the company / role.
@@ -212,10 +188,10 @@ Recommended distribution:
 
 3. CONNECT THE CANDIDATE TO THE COMPANY SPECIFICALLY
    - Use Internet Search to find information about the company's unique features, values, or recent developments.
-   - Identify 1–2 distinctive characteristics of the company that genuinely align with the candidate and job title.
+   - Identify 1–2 distinctive characteristics of the company or job description that align with the candidate.
    - Explain WHY those characteristics matter to the candidate.
    - Avoid generic claims such as "your company is innovative" or "I admire your culture."
-   - Whenever possible, reference a specific product, methodology, event, technology, business model, or cultural characteristic.
+   - Whenever possible, reference a up-to-date product, methodology, event, technology, business model, or cultural characteristic.
    - The points should feel specific and deliberately chosen rather than interchangeable with another company.
 
 4. CREATE A CLEAR "WHY THIS ROLE" ARGUMENT
@@ -351,7 +327,7 @@ Recommended distribution:
 
 Before producing the final letter, verify:
 
-- [ ] The opening contains a specific connection.
+- [ ] The opening contains a connection.
 - [ ] The letter explains what the candidate learned, not just what they did.
 - [ ] The company-specific motivation could not easily be copied to another company.
 - [ ] The role motivation is explicitly connected to the candidate's interests.

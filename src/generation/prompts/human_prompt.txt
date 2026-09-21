@@ -12,17 +12,17 @@ CANDIDATE CONTEXT AND RELEVANT EXPERIENCES:
 TASK: 
 Using ONLY the evidence provided in the Candidate Context, write a compelling 
 cover letter that:
-1. Shows deep understanding of {company_name}'s mission and culture
+1. Shows deep understanding of job description and {company_name}'s mission, achievements and culture
 2. Matches key job requirements to specific candidate achievements
-3. Demonstrates the soft/technical skills needed for success
+3. Implicitely Demonstrates the soft/technical skills needed for success identified in the job description
 4. Tells a coherent narrative of why this candidate is perfect for this role
 
 ## EXAMPLE OUTPUT (One-shot)
 
-My visit to the UBS History Exhibition felt like stepping into living narrative, deeply rooted in Swiss infrastructure and defined by continuous reinvention. My name is Simon and I am passionate about helping shape the next chapter of UBS’s story, following the landmark acquisition of Credit Suisse.
+My visit to the UBS History Exhibition felt like stepping into a narrative of resilience, reinvention, and responsibility; qualities that continue to define UBS today. My name is Simon and I am passionate about helping shape the next chapter of UBS’s story, especially in serving some of our most influential clients.
 
-UBS stands out as a bank dedicated to a strong strategic focus of driving business outcomes collaboratively. The investment banking division can be seen at the centre of the ‘one UBS’ model, delivering cross-functional insights to other departments with quality recognised as Europe’s best FX bank. I have thrived in environments with a holistic view of processes, where Business Managers act as the link between front-to-back functions that leave them best poised to drive enhancements. These philosophies have been key to solidify UBS’s status as the world’s best bank for trading technology (Euromoney 2025), with innovations such as improved FX distribution latency and Cloud FinOps dashboards.
+Across the globe, UBS is synonymous with premier wealth management; handling over $6tr worth of assets. It is a reputation that is built upon many decades of excellence and a culture of strong risk management (embedded as one of the pillars) that balances both opportunity and control. This approach has enabled us to rise to new heights, reflected by its strongest quarterly performance and multiple accolades in the Euromoney awards that solidifies UBS as a special place to work; fast-paced, high-stakes and intellectually demanding.
 
-Through my experience, I have developed technical and analytical skills that align strongly with this position. I have contributed to many transformation initiatives that improved workflows and access to information in a banking environment, including enhancing a retrieval-augmented generation (RAG) model to generate more efficient insights from proprietary banking datasets. In addition, my roles within operational risk consolidated my understanding of regulatory frameworks and the importance of controls, accuracy, and stakeholder collaboration in high-performing environments. Alongside my technical experience, I have maintained a strong interest in financial markets through banking certifications, market awareness, and experience as an investment analyst. I am particularly drawn to the fast-paced and collaborative nature of Global Markets and would value the opportunity to contribute to UBS’s FX & Rates COO team while continuing to learn from industry-leading professionals.
+Through my experience in risk-focused roles, I have developed a strong appreciation for the importance of effective lines of defence, especially in an increasingly complex financial and regulatory environment. I enjoy working at the intersections of business, technology, and risk; making sure that robust controls are supported by strong analysis and innovations. Most recently, I have been leading the development of a new risk management platform, designed in close collaboration with stakeholders across all levels of the bank, to strengthen operational efficiency.
 
-Thank you for considering my application. I would welcome the opportunity to discuss how my analytical, technical, and commercial skillset could contribute to the Zurich team.
+Ultimately, I am eager to bring newfound flare to UBS’s Review & Risk Intelligence Team, playing a role in providing insight and forward-thinking perspectives. I look forward to describing in further detail how I can be a valuable addition to the Zurich office.
