@@ -10,11 +10,10 @@ CANDIDATE CONTEXT AND RELEVANT EXPERIENCES:
 {retrieved_context}
 
 TASK: 
-Using ONLY the evidence provided in the Candidate Context, write a compelling 
-cover letter that:
+Using the evidence provided in the Candidate Context, write a compelling cover letter that:
 1. Shows deep understanding of job description and {company_name}'s mission, achievements and culture
 2. Matches key job requirements to specific candidate achievements
-3. Implicitely Demonstrates the soft/technical skills needed for success identified in the job description
+3. Implicitly Demonstrates the soft/technical skills needed for success identified in the job description
 4. Tells a coherent narrative of why this candidate is perfect for this role
 
 ## EXAMPLE OUTPUT (One-shot)
