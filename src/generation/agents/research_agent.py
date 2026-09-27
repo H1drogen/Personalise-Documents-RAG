@@ -10,12 +10,12 @@ from langchain.chat_models import init_chat_model
 from langchain_google_genai import ChatGoogleGenerativeAI
 from deepagents import create_deep_agent
 
-from generation.prompts.research import (
+from generation.prompts.deep_research import (
     RESEARCHER_INSTRUCTIONS,
     RESEARCH_WORKFLOW_INSTRUCTIONS,
     SUBAGENT_DELEGATION_INSTRUCTIONS,
 )
-from generation.prompts.research import tavily_search, think_tool
+from generation.prompts.deep_research import tavily_search, think_tool
 
 # Limits
 max_concurrent_research_units = 3
@@ -48,8 +48,9 @@ research_sub_agent = {
 # model = ChatGoogleGenerativeAI(model="gemini-3-pro-preview", temperature=0.0)
 
 # Model Claude 4.5
-model = init_chat_model(model="anthropic:claude-sonnet-4-5-20250929", temperature=0.0)
+# model = init_chat_model(model="anthropic:claude-sonnet-4-5-20250929", temperature=0.0)
 
+# Model GPT-5.5
 model = init_chat_model(model="openai:gpt-5.5", temperature=0.0)
 
 # Create the agent

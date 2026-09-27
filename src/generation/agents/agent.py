@@ -2,31 +2,7 @@ from deepagents import create_deep_agent
 from langchain.chat_models import init_chat_model
 
 def create_agent(instructions: str, tools):
-
-    # COMPANY_RESEARCHER_INSTRUCTIONS = """You research target companies using web search.
-    #
-    # For each company name provided, use web_search to find:
-    # - Company mission, values, and culture
-    # - Recent news, products, or services
-    # - Company size, industry, and key achievements
-    # - Team composition and leadership (if relevant to the role)
-    #
-    # Compile findings into a concise research summary with:
-    # - Company overview and what they do
-    # - Key differentiators and competitive advantages
-    # - Recent developments or announcements
-    # - Any information relevant to the job role
-    #
-    # Return insights in under 300 words. Use bullet points or short paragraphs for clarity. Avoid speculation; only include verified information from reputable sources."""
-    #
-    # chunk_analyst_subagent = {
-    #     "name": "chunk-analyst",
-    #     "description": (
-    #         "Analyze one retrieved documentation chunk file. "
-    #         "Pass the user question and a single file path under /retrieved/."
-    #     ),
-    #     "system_prompt": COMPANY_RESEARCHER_INSTRUCTIONS,
-    # }
+    """Create a deep research agent with custom tools and prompts."""
 
     chunk_analyst_subagent = {
         "name": "chunk-analyst",
