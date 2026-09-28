@@ -118,18 +118,18 @@ def extract_metadata(text: str) -> dict:
     skills = [s for s in TECH_SKILLS if s in text_lower]
     soft_skills = [s for s in SOFT_SKILLS if s in text_lower]
 
-    # has_impact = any(
-    #     word in text_lower
-    #     for word in ['won', 'achieved', 'delivered', 'improved', 'reduced',
-    #                  'increased', 'first place', 'finalist', 'silver', 'gold']
-    # )
+    has_impact = any(
+        word in text_lower
+        for word in ['won', 'achieved', 'delivered', 'improved', 'reduced',
+                     'increased', 'first place', 'finalist', 'silver', 'gold']
+    )
 
     achievement_type = 'technical' if skills else ('leadership' if any(w in text_lower for w in ['team', 'president', 'led', 'managed']) else 'general')
 
     return {
         'technical_skills': skills,
         'soft_skills': soft_skills,
-        # 'has_quantified_impact': has_impact,
+        'has_quantified_impact': has_impact,
         'achievement_type': achievement_type,
     }
 
