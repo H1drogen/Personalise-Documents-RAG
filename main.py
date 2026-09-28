@@ -7,13 +7,17 @@ from langchain_classic.chains.llm_summarization_checker.base import PROMPTS_DIR
 from langchain_core.messages import HumanMessage
 
 from generation.agents.agent import create_agent
+from generation.agents.validation_agent import create_company_claim_validator
 from generation.tools.search import search_content
 from src.indexing import *
 import os
 
 def main():
     load_dotenv()
-    # os.environ("LANGSMITH_API_KEY")
+
+    k = int(os.getenv('RETRIEVAL_K'))
+    if k is None:
+        k = 5
 
     config = EmbeddingConfig(
         'openai',
@@ -31,23 +35,80 @@ def main():
     docs = split_docs(docs)
     print(docs)
 
-    retriever = create_retriever(docs, embedding)
+    retriever = create_retriever(docs, embedding, k=k)
 
-    company_name = "Citadel"
-    role_title = "Software Engineer – Intern (Europe)"
+    company_name = "Gunvor"
+    role_title = "Graduate Program – Quantitative Analysis"
     job_description = r"""
-    At Citadel, our engineers work in small teams to turn the best ideas into high-performing and resilient technology. With short development cycles, work rapidly goes into production. As an engineer, you can create system architectures, develop platforms and build web frameworks. You’ll have access to state-of-the-art tools and apply innovative techniques including distributed computing, natural language processing, machine learning and more.
-    As an intern, you’ll get to challenge the impossible in technology through an 11-week program that will allow you to collaborate and connect with senior team members. In addition, you’ll get the opportunity to network and socialize with peers throughout the internship.
-    Your Objectives:
-    Create technological tools that bring trading strategies to life
-    Develop high-performance, large data research platforms
-    Work in small teams to build the future of finance
-    Your Skills & Talents:
-    Bachelor's, master's or PhD in computer science, computer engineering or related fields
-    Exceptional programming and design skills
-    Strong analytical skills and familiarity with probability and statistics
-    Ability to communicate effectively in a collaborative, complex and highly technical team environment
-    Intellectual curiosity and passion for solving challenging problems using technology
+Job Description:
+
+Turn data into commercial insight.
+
+At Gunvor, quantitative analysis plays a critical role in helping our commercial teams understand markets, identify opportunities and make informed trading decisions.
+
+Our 18-month Quantitative Analysis Graduate Program is designed for curious, analytical graduates who want to apply mathematics, technology and data to real-world trading challenges while building a long-term career in commodity markets.
+
+You'll join an international environment where quantitative research, analytics and commercial thinking come together to solve complex business problems.
+
+Your Journey
+
+During the Program, you'll complete two 9-month rotations, giving you exposure to different quantitative and commercial functions across the business.
+
+Depending on business needs, rotations may include:
+
+Quantitative Analysis
+
+Market Risk
+
+Research
+
+Trading Analytics
+
+You'll be based in Geneva, with the opportunity for an international rotation in one of our global offices, including Singapore, Houston or London.
+
+Alongside your rotations, you'll follow a structured development journey combining technical learning, industry knowledge and professional development to prepare you for a career in quantitative analysis within commodity trading.
+
+What You'll Do
+
+Throughout the Program, you'll:
+
+Build and enhance quantitative models that support commercial and trading decisions.
+
+Analyse market data to identify trends, relationships and opportunities.
+
+Develop forecasting, optimisation and analytical tools.
+
+Work closely with quantitative analysts, traders, researchers and Market Risk teams.
+
+Apply programming and statistical techniques to solve real business challenges.
+
+Present analytical findings and recommendations to stakeholders.
+
+Take ownership of meaningful projects from the beginning of your career.
+
+Who We're Looking For
+
+We're looking for analytical thinkers who enjoy solving complex problems and applying quantitative methods to commercial challenges.
+
+You'll ideally have:
+
+A Master's or PhD in Mathematics, Statistics, Physics, Engineering, Computer Science, Data Science, Quantitative Finance or another highly quantitative discipline.
+
+Up to 24 months of professional experience, excluding internships.
+
+Strong programming skills, particularly in Python.
+
+Experience using modern analytical tools and AI-enabled solutions to enhance research, modelling or decision-making.
+
+Excellent analytical, critical thinking and problem-solving skills.
+
+Strong communication skills and the ability to explain complex ideas clearly.
+
+Curiosity about global commodity markets and quantitative trading.
+
+Fluency in English.
+
+Previous internships or professional experience within quantitative finance, banking, commodities, energy trading or research will be considered a strong advantage.
     """,
 
     retrieved_context = retriever.invoke(
@@ -96,15 +157,41 @@ def main():
         {"messages": [HumanMessage(content=HUMAN_QUERY)]}
     )
 
-    for msg in result.get("messages", []):
-        if "chunk-analyst" in str(msg.content):
-            print("✅ Chunk analyst processed RAG results")
-        if "/retrieved/" in str(msg.content):
-            print(f"✅ RAG FILES USED:\n{msg.content}")
-        if msg.text:
-            print(msg.text)
-            with open(f"output/cover_letter.txt", "w") as f:
-                f.write(msg.text)
+    cover_letter = next(
+        (msg.text for msg in reversed(result.get("messages", [])) if msg.text),
+        None,
+    )
+    if cover_letter is None:
+        raise RuntimeError("The cover-letter agent returned no text.")
+
+    print(cover_letter)
+    with open("output/cover_letter.txt", "w") as f:
+        f.write(cover_letter)
+
+    validator = create_company_claim_validator()
+    validation_prompt = PROMPTS["company_claim_validation.txt"].format(
+        company_name=company_name,
+        role_title=role_title,
+        cover_letter=cover_letter,
+    )
+    validation_result = validator.invoke(
+        {"messages": [HumanMessage(content=validation_prompt)]}
+    )
+    validation_report = next(
+        (
+            msg.text
+            for msg in reversed(validation_result.get("messages", []))
+            if msg.text
+        ),
+        None,
+    )
+    if validation_report is None:
+        raise RuntimeError("The company-claim validator returned no report.")
+
+    with open("output/company_claim_validation.txt", "w") as f:
+        f.write(validation_report)
+
+
 
 if __name__ == "__main__":
     main()
