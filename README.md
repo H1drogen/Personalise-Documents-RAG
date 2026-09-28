@@ -14,6 +14,8 @@ Documents are split by chunking on paragraphs.
   - prompt description
   - retrieved information
   - internet research
+- Fact-checks company-specific claims in the generated letter and writes a validation
+  report to `output/company_claim_validation.txt`
 
 ## Chunking strategy
 Documents are split on paragraph boundaries first, then large chunks are further split into smaller overlapping pieces.

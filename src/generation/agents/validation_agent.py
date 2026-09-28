@@ -35,7 +35,7 @@ matches. Include the exact source URL for every row. If no issues are found, say
     agent = create_deep_agent(
         model=model,
         system_prompt=validation_instructions,
-        tools={"type": "web_search"},
+        tools=[{"type": "web_search"}],
         subagents=[],
     )
 
