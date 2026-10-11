@@ -331,10 +331,7 @@ Before producing the final letter, verify:
 - [ ] The letter explains what the candidate learned, not just what they did.
 - [ ] The company-specific motivation could not easily be copied to another company.
 - [ ] The role motivation is explicitly connected to the candidate's interests.
-- [ ] Major claims are supported by evidence.
+- [ ] Add a reference to specific company research project, publication or priority area that interested you, and why.
 - [ ] Technical experience is used selectively and meaningfully.
-- [ ] The candidate's career progression feels logical.
-- [ ] The language is confident but not boastful.
 - [ ] Corporate clichés have been removed.
-- [ ] The conclusion is forward-looking and specific.
 - [ ] The overall letter sounds like one coherent person wrote it.
