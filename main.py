@@ -37,78 +37,29 @@ def main():
 
     retriever = create_retriever(docs, embedding, k=k)
 
-    company_name = "Gunvor"
-    role_title = "Graduate Program – Quantitative Analysis"
+    company_name = "Nestle"
+    role_title = "Digital Food Safety Early Warning Associate Specialist"
     job_description = r"""
-Job Description:
+Shape the future through scientific breakthroughs and innovation.
 
-Turn data into commercial insight.
+As a Digital Food Safety Early Warning Associate Specialist at Nestlé Research, your mission is to enable the proactive detection of potential food safety issues by strengthening the evaluation of external scientific signals and the evolution of digital early warning systems.. You’ll make a difference by collaborating closely with food safety, quality, research, technology, and external data partners. This is your opportunity to turn ideas into sustainable and innovative solutions for people, pets, and the planet.
 
-At Gunvor, quantitative analysis plays a critical role in helping our commercial teams understand markets, identify opportunities and make informed trading decisions.
+How you’ll make an impact as a Digital Food Safety Early Warning Associate Specialist
 
-Our 18-month Quantitative Analysis Graduate Program is designed for curious, analytical graduates who want to apply mathematics, technology and data to real-world trading challenges while building a long-term career in commodity markets.
+Strengthening proactive food safety early warning by scouting and evaluating emerging issues across priority contaminant areas.
+Identifying and assessing internal and external data sources that improve the detection, prioritization, and scientific evaluation of early signals.
+Contribute to the evaluation and deployment of digital technologies that enhance data-driven detection of emerging food safety topics.
+Testing prototypes that help transform early warning processes into scalable digital solutions.
+Participate in scientific collaborations that connect research, technology, and business needs to protect consumers.
+Delivering project activities with focus, rigor, and follow-through to support impactful food safety decisions.
+What will make you successful
 
-You'll join an international environment where quantitative research, analytics and commercial thinking come together to solve complex business problems.
-
-Your Journey
-
-During the Program, you'll complete two 9-month rotations, giving you exposure to different quantitative and commercial functions across the business.
-
-Depending on business needs, rotations may include:
-
-Quantitative Analysis
-
-Market Risk
-
-Research
-
-Trading Analytics
-
-You'll be based in Geneva, with the opportunity for an international rotation in one of our global offices, including Singapore, Houston or London.
-
-Alongside your rotations, you'll follow a structured development journey combining technical learning, industry knowledge and professional development to prepare you for a career in quantitative analysis within commodity trading.
-
-What You'll Do
-
-Throughout the Program, you'll:
-
-Build and enhance quantitative models that support commercial and trading decisions.
-
-Analyse market data to identify trends, relationships and opportunities.
-
-Develop forecasting, optimisation and analytical tools.
-
-Work closely with quantitative analysts, traders, researchers and Market Risk teams.
-
-Apply programming and statistical techniques to solve real business challenges.
-
-Present analytical findings and recommendations to stakeholders.
-
-Take ownership of meaningful projects from the beginning of your career.
-
-Who We're Looking For
-
-We're looking for analytical thinkers who enjoy solving complex problems and applying quantitative methods to commercial challenges.
-
-You'll ideally have:
-
-A Master's or PhD in Mathematics, Statistics, Physics, Engineering, Computer Science, Data Science, Quantitative Finance or another highly quantitative discipline.
-
-Up to 24 months of professional experience, excluding internships.
-
-Strong programming skills, particularly in Python.
-
-Experience using modern analytical tools and AI-enabled solutions to enhance research, modelling or decision-making.
-
-Excellent analytical, critical thinking and problem-solving skills.
-
-Strong communication skills and the ability to explain complex ideas clearly.
-
-Curiosity about global commodity markets and quantitative trading.
-
-Fluency in English.
-
-Previous internships or professional experience within quantitative finance, banking, commodities, energy trading or research will be considered a strong advantage.
+Bringing basic chemistry knowledge and a good understanding of chemical contaminants, including how they can emerge, evolve, and impact food safety.
+Applying knowledge of food safety and quality processes in the context of supply chains, incident occurrence, issue evolution, and potential consumer impact.
+Using data and digital technologies in a food safety context, ideally to support data-driven risk assessment, root-cause analysis, and early warning decision-making.
+Collaborating effectively with diverse internal and external partners, while translating research into practical business impact.
+Communicating fluently in English; working proficiency in French is a plus.
+Bringing collaboration, fresh thinking, bold questions, respect, and a positive, wellbeing-oriented mindset.
     """,
 
     retrieved_context = retriever.invoke(
@@ -165,7 +116,7 @@ Previous internships or professional experience within quantitative finance, ban
         raise RuntimeError("The cover-letter agent returned no text.")
 
     print(cover_letter)
-    with open("output/cover_letter.txt", "w") as f:
+    with open(f"output/{company_name.replace(' ', '_')}.txt", "w") as f:
         f.write(cover_letter)
 
     validator = create_company_claim_validator()
